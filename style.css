@@ -1,0 +1,374 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.btn-navigation {
+  height: 3.375rem;
+  display: flex;
+  align-items: center;
+}
+
+.night {
+  background: #1e1e1e;
+  color: white;
+}
+
+.day {
+  background: white;
+  color: #1e1e1e;
+}
+
+.wrapper-usefullLink,
+.wrapper-buttonPreventF5 {
+  display: inline-block;
+}
+
+.item-usefulLink {
+  display: inline-block;
+  margin: 0.3rem;
+}
+
+.item-usefulLink a {
+  color: blue;
+}
+
+.hide {
+  display: none;
+}
+
+.cal {
+  display: inline-block;
+  border: 0.1rem solid black;
+}
+
+.cal-table {
+  border-collapse: collapse;
+}
+
+.cal tr,
+.cal th,
+.cal td {
+  border: 0.1rem solid black;
+}
+
+.date-and-time {
+  display: inline-block;
+  vertical-align: top; 
+  /* почему пришлось использовать?? почему ранее не был прижат к верху? 
+  потому что в reset vertical-align: baseline*/
+  margin: 0.3rem; 
+  padding: 1.rem;
+  border-radius: 0.5rem; 
+}
+
+.date-and-time p {
+  margin: 0.7rem 0;
+}
+
+.dateToday {
+  font-size: 1.5rem; 
+  font-family: "cursive";
+}
+
+.currentTimeOnScreen {
+  padding: 0.2rem; 
+  color: green; 
+  font-family: "cursive"; 
+  font-size: 1.33rem;
+  border: 0.3rem #0ff solid; 
+  background-color: #0fa; 
+  border-radius: 0.5rem; 
+  
+}
+
+.strong {
+  font-weight: bold;
+  text-align: center;
+  background: red; 
+}
+  
+.form-add-reminder {
+  display: flex;
+  justify-content: space-around;
+  width: 75%;
+}
+
+.form {
+  text-align: center;
+}
+
+.header-reminder {
+  /* display: flex;
+  justify-content: flex-start; */
+  display: table-row;
+}
+
+.reminder {
+  opacity: 1;
+  display: table;
+}
+
+.main-reminder {
+  /* display: flex;
+  flex-direction: column;
+  width: 60%; */
+  display: table;
+}
+
+.row {
+  display: table-row;
+}
+
+.th,
+.description,
+.repeatIn,
+.done,
+.delete {
+  display: table-cell;
+}
+
+.red {
+  border: 1px solid red;
+  background: rgba(252, 144, 3, 0.37);
+  font-weight: bold;
+  /* border-radius: 0.2rem; */
+}
+
+.red .description::before {
+  content: ' ! '
+}
+
+.parent {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.one {
+  background: red;
+  height: 25px;
+  margin: 5px;
+  border: 0.1rem solid black;
+  flex-grow: 1;
+}
+
+.parent-1 .one {
+  width: 100px;
+}
+
+.parent-2 .one {
+  width: 200px;
+}
+
+.parent-3 .one {
+  width: 300px;
+}
+
+.parent-4 .one {
+  width: 400px;
+}
+
+.parent-5 .one {
+  width: 500px;
+}
+
+.parent-6 .one {
+  width: 600px;
+}
+
+.parent-7 .one {
+  width: 400px;
+}
+
+.parent-8 .one {
+  width: 300px;
+}
+
+
+.two {
+  background: green;
+  height: 25px;
+  margin: 5px;
+  border: 0.1rem solid black;
+}
+
+
+.three {
+  background: yellow;
+  height: 25px;
+  margin: 5px;
+  border: 0.1rem solid black;
+}
+
+.four {
+  background: blue;
+  height: 25px;
+  margin: 5px;
+  border: 0.1rem solid black;
+}
+
+.parent-1 .two {
+  width: 100px;
+}
+
+.parent-2 .two {
+  width: 150px;
+}
+
+.parent-3 .two {
+  width: 150px;
+}
+
+.parent-4 .two {
+  width: 50px;
+}
+
+.parent-5 .two {
+  width: 40px;
+}
+
+.parent-6 .two {
+  width: 20px;
+}
+
+.parent-7 .two {
+  width: 50px;
+}
+
+.parent-8 .two {
+  width: 70px;
+}
+
+.parent-1 .three {
+  width: 20px;
+}
+
+.parent-2 .three {
+  width: 20px;
+}
+
+.parent-3 .three {
+  width: 20px;
+}
+
+.parent-4 .three {
+  width: 20px;
+}
+
+.parent-5 .three {
+  width: 20px;
+}
+
+.parent-6 .three {
+  width: 20px;
+}
+
+.parent-7 .three {
+  width: 20px;
+}
+
+.parent-8 .three {
+  width: 20px;
+}
+
+.parent-1 .four {
+  width: 20px;
+}
+
+.parent-2 .four {
+  width: 20px;
+}
+
+.parent-3 .four {
+  width: 20px;
+}
+
+.parent-4 .four {
+  width: 20px;
+}
+
+.parent-5 .four {
+  width: 20px;
+}
+
+.parent-6 .four {
+  width: 20px;
+}
+
+.parent-7 .four {
+  width: 20px;
+}
+
+.parent-8 .four {
+  width: 20px;
+}
+
+.input-account-as-study:checked + label,
+.study-time  {
+  font-weight: bold;
+}
+
+.container-reaction-time {
+  /* visibility: hidden; */
+  opacity: 0;
+}
+
+.visible {
+  visibility: visible;
+  background: grey;
+  opacity: 1;
+  /* transition-property: visibility;
+  transition-duration: 2s; */
+  transition: background 2s, opacity 2s;
+}
+
+
+
+
+
+
+

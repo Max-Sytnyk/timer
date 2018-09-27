@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Таймер не активен</title>
+  <link rel="icon" type="image/ico" href="favicon.ico" sizes="16x16">
+  <!-- https://habr.com/post/260777/ -->
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="body day">
+  <div class="navigation">
+    <div class="btn-navigation">
+          <button class="buttonPreventF5" >buttonPreventF5</button>
+          <button class="btn-usefullLink">Links</button>
+          <button class="btn-change-background night">Change background</button>
+    </div>
+        
+    <div class="wrapper-usefullLink hide">
+        <div class="item-usefulLink"><a id="aId" href="https://learn.javascript.ru/">Учебник по JS</a></div>
+        <div class="item-usefulLink"><a href="http://htmlbook.ru/css/transform">HTMLbook</a></div>
+        <div class="item-usefulLink"><a href="https://stepik.org/catalog">Stepic</a></div>
+        <div class="item-usefulLink"><a href="http://docode.ru/map">DoCode</a></div>
+        <div class="item-usefulLink"><a href="https://html5book.ru/html-html5/">HTML5book</a></div>
+        <div class="item-usefulLink"><a href="https://sukhari.com.ua/specialization/javascript?listing-display=rows">СуХаРи - курсы JS</a></div>  
+        <div class="item-usefulLink"><a href="https://dou.ua/lenta/digests/junior-digest-29/?from=fp_top1m_also">Dou - дайджест</a></div>
+        <div class="item-usefulLink"><a href="https://developer.mozilla.org/ru/docs/Web/Tutorials">CSS-учебник на МДН </a></div>
+        <div class="item-usefulLink"><a href="https://caniuse.com/">Can I Use ... </a></div>
+        <div class="item-usefulLink"><a href="https://polyfill.io/v2/docs/">Polifyl </a></div>
+        <div class="item-usefulLink"><a href="https://codedojo.ru/topics/javascript">CodeDojo </a></div>
+        <div class="item-usefulLink"><a href="https://www.codecademy.com/">Codecademy </a></div>
+        <div class="item-usefulLink"><a href="https://ru.lipsum.com/">Lorem Ipsum </a></div>
+        <div class="item-usefulLink"><a href="http://activedatagroup.net/">http://activedatagroup.net/ </a></div>
+        <div class="item-usefulLink"><a href="https://www.google.com.ua/search?num=30&amp;client=opera&amp;hs=ngO&amp;ei=XogCW_bpBdivLsAGLq5aIAg&amp;q=getComputedStyle+site%3Ahttps%3A%2F%2Flearn.javascript.ru&amp;oq=getComputedStyle+site%3Ahttps%3A%2F%2Flearn.javascript.ru&amp;gs_l=psy-ab.3...369645.369645.0.370523.1.1.0.0.0.0.113.113.0j1.1.0....0...1c.1.64.psy-ab..0.0.0....0.WvJkw5HnQzk">Поиск по сайту Learn.JavaScript</a></div>
+        <div class="item-usefulLink"><a href="https://www.google.com.ua/search?num=30&amp;client=opera&amp;ei=c40CW7HMN4KQsAX-263AAg&amp;q=scrollWidth+site%3Ahttps%3A%2F%2Fjavascript.info&amp;oq=scrollWidth+site%3Ahttps%3A%2F%2Fjavascript.info&amp;gs_l=psy-ab.3...8904089.8909822.0.8910748.8.8.0.0.0.0.127.819.3j5.8.0....0...1c.1.64.psy-ab..0.0.0....0.NQgCQ_TiBNw">JavaScript.INFO </a></div>
+        <div class="item-usefulLink"><a href="https://regexr.com/">regexr.com </a></div>
+        <div class="item-usefulLink"><a href="https://regex101.com/">regex101.com </a></div>
+        <div class="item-usefulLink"><a href="https://www.youtube.com/watch?v=9hLkbhRs7jM">SORAX Регулярные выражения </a></div>
+        <div class="item-usefulLink"><a href="http://activedatagroup.net/">http://activedatagroup.net/ </a></div>
+    </div>
+
+</div>
+
+<div>
+    <div class="date-and-time">
+        <p>Сегодня  <span class="dateToday" >понедельник, 28 мая</span></p>
+        
+        <p>Текущее время <span class="currentTimeOnScreen" >13:15:50</span></p>
+        
+     </div>
+     <div class="cal">
+        <table class="cal-table"><tbody></tbody></table>
+      </div>
+    </div>
+
+<div class="strong">
+    <strong>ЗАМЕНИТЬ PX на REM \ EM</strong>
+</div>
+
+<div class="wrapper-add-reminder">
+    <form name="form-add-reminder" class="form-add-reminder" action="/">
+        <div class="form">
+            Наименование
+            <div><input type="text" placeholder="Наименование ссылки" minlength="3" size="35" required></div>
+        </div>
+        <div class="form">
+            Ссылка
+            <div><input type="text" placeholder="Ссылка" minlength="3" required></div>
+        </div>
+        <div class="form">
+            Как часто повторять?
+            <div><input type="radio" name="reminder-schedule" checked
+                >по формуле <input type="radio" name="reminder-schedule"> ежедневно </div>
+            
+        </div>
+        <div class="form">
+            Сохранить?
+            <div><input type="submit" value="OK"></div>
+            </div>
+    </form>
+</div>
+
+<div class="reminder">
+<div class="row header-reminder">
+    <div class="th name-reminder">
+        Наименование
+    </div>
+    <div class="th date-reminder">
+        Повторить не позже
+    </div>
+    <div class="th btn-repeated-reminder">
+        Повторил
+    </div>
+    <div class="th btn-delete-reminder">
+        Удалить
+    </div>
+</div>    
+<div class="main-reminder">
+    
+</div>
+
+
+
+
+    <div class="parent parent-1">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+        <div class="four"></div>
+    </div>
+    <div class="parent  parent-2">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+        <div class="four"></div>
+    </div>
+    <div class="parent  parent-3">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+        <div class="four"></div>
+    </div>
+    <div class="parent parent-4">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+        <div class="four"></div>
+    </div>
+    <div class="parent parent-5">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+        <div class="four"></div>
+    </div>
+    <div class="parent parent-6">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+        <div class="four"></div>
+    </div>
+    <div class="parent parent-7">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+        <div class="four"></div>
+    </div>
+    <div class="parent parent-8">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+        <div class="four"></div>
+    </div>
+
+</div>
+
+<div class="container-timer">
+    <form action="" class="form-timer" name="through-how-much-time">
+<div class="container-through-how-much-time">
+    Через сколько должен зазвонить будильник?
+    <input type="number" min="0" max="120" step="5" class="input-through-how-much-time" name="input-through-how-much-time" id="input-through-how-much-time" placeholder="50" value="50">
+</div>
+<div class="container-account-as-study">
+    <input type="checkbox" class="input-account-as-study" name="input-account-as-study" id="input-account-as-study" checked>
+    <label for="input-account-as-study">поставь галочку, чтобы учитывать это время как время учебы</label>
+</div>
+<div class="container-btn-timer">
+<input type="submit" class="btn-timer" value="Включить таймер!">
+<span class="container-reaction-time">
+    Таймер сработает в <span class="reaction-time"></span>
+</span>
+</div>
+<p class="container-study-time">
+    Сегодня учился <span class="study-time study-hours">0</span> часов или <span class="study-time study-minutes">0</span> минут
+</p>
+</form>
+</div>
+
+
+
+
+<div class="test 0">0</div>
+
+<button class="promise">sdsdsds</button>
+
+
+<blockquote class="trello-card"><a href="https://trello.com/c/fkny62V8/4-%D0%BF%D0%BE%D0%BA%D1%83%D0%BF%D0%BA%D0%B8">Покупки</a></blockquote><script src="https://p.trellocdn.com/embed.min.js"></script>
+
+
+<!-- <audio id="audio" src="Alibi.mp3" controls autoplay></audio> -->
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
